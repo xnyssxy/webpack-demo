@@ -67,15 +67,39 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(1);
+__webpack_require__(1);
+module.exports = __webpack_require__(3);
 
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(2);
+
+// hello there!!
+console.log('I\'ve been required by Webpack');
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+(function () {
+  var IAmES6 = "I've been transpiled by Babel";
+  console.log(IAmES6);
+})();
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports) {
 
-console.log(`I've been required by Webpack`);
-
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
